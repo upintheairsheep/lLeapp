@@ -4,7 +4,7 @@ from scripts.artifact_report import ArtifactHtmlReport
 from scripts.lleapfuncs import logfunc, tsv, get_next_unused_name, get_user_name_from_home
 
 
-def get_bash_history(files_found, report_folder, seeker, wrap_text):
+def get_python_history(files_found, report_folder, seeker, wrap_text):
 
     for file_found in files_found:
         file_found = str(file_found)
