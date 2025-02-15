@@ -20,7 +20,7 @@ def get_ash_history(files_found, report_folder, seeker, wrap_text):
 
         usageentries = len(data_list)
         if usageentries > 0:
-            report = ArtifactHtmlReport(f'Ash (Alphine Linux Command) History of {user_name}')
+            report = ArtifactHtmlReport(f'Ash History of {user_name}')
             #check for existing and get next name for report file, so report from another file does not get overwritten
             report_path = os.path.join(report_folder, f'ash_history_{user_name}.temphtml')
             report_path = get_next_unused_name(report_path)[:-9] # remove .temphtml
@@ -39,7 +39,7 @@ def get_ash_history(files_found, report_folder, seeker, wrap_text):
 
 __artifacts__ = {
         "ash_history": (
-                "Ash History (Alphine Linux Command History)",
+                "Ash History",
                 ('*/.ash_history'),
                 get_ash_history)
 }
